@@ -82,11 +82,9 @@ footer {
     margin-right: auto;
   }
   
-  
-  
   main {
     width: 100%;
-    marging: 50px 0;
+    margin: 50px 0;
     display: block;
   }
   
