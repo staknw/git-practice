@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #6c6b6b;/*Home About Topic CARAVANの色が変わる*/
+}
+
+a {
+  text-decoration: none;  /*aにリンクをつけて下線があったが消えた*/
+}
+
+header,nav,h2, .main-visual,footer {
+  font-family: Chalkduster, "Bradley Hand", Courier, "Segoe Print", sans-serif;
+}
+
+header {
+  width: 90%;
+  padding: 15px 0;  /*上下左右*/
+  margin: 0 auto;/* 中央寄せ（左右に余白がないとできない） */
+  text-align: center;/*テキストが中央に行く*/
+  position: relative;  /* #socialの基準位置を相対位置へ変更する */
+}
+
+.social i {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.social {
+  position: absolute;  /* headerの左上を基準に絶対位置で指定する */
+  top: 22px;  /* headerの左上から22px下側へ移動する */
+  right: 22px;   /* headerの右上から22px左側へ移動する */
+}
+
+
+
+header .heading {
+  font-size: 32px;
+}
+
+.nav-list {
+  text-align: center;/*Home About Topicが中央に行く*/
+  padding: 10px 0;  /*上下左右*/
+  margin: 0 auto;   /*要素を中央揃えにする,ブロックレベル要素の<div>or<p>*/
+}
+
+.nav-list-item {
+  list-style: none;  /*先頭に・をつけない*/
+  display/*プロパティの一つ*/: inline-block;  /*要素が平ぺったく横に並んでいく*/
+  margin: 0 20px;  /*上下左右*/
+}
+
+.main-visual {
+  width: 100%;
+  height: 300px;
+  background-image: url(img/mv.jpg);  /*背景画像読み取る*/
+  background-size: cover;   /* 縦横比を維持したまま背景領域を埋め尽くす */
+  background-position: center;/* 背景画像を中央に配置[50px左から100px上からの位置] */
+  
+}
+
+.main-visual-content {
+  width: 40%; /*画面幅が変わってもバランスを保てるように、横幅（width）を％で指定,100にしたら黒いのが横いっぱいになる*/
+  height: 300px;
+  background-color: rgba(0,0,0,0.5); /* 背景色を半透明の黒にする */
+  text-align: center;  /* 文字を中央揃えにする */
+  padding-top: 105px;  /* 上側の内側余白で垂直方向の位置を調整 */
+}
+
+.main-visual-text {
+  color: #fff;
+}
+
+.main-visual-name {
+  margin-top: 30px;
+  color: #fff;
+}
+
+main {
+  width: 800px;
+  display: flex;  /*Flexboxの利用*/
+  justify-content: center;  /*子要素の横並び・中央寄せ*/
+  margin: 0 auto;  /* 中央寄せ（左右に余白がないとできない） */
+  padding: 70px 0;  /* 上下に70px、左右に0pxの内側余白,見やすくする */
+}
+
+
+.blog {
+  width: 540px;
+  margin-right: 30px;  /* 領域の右側余白 */
+}
+
+
+.blog-heading {
+  border-bottom: 8px solid #f7f7f7;
+  text-align: center;
+  line-height: 0.6;
+}
+
+.blog-box {
+  padding-top: 50px;
+}
+
+.blog-item {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f7f7f7;
+  display: flex;   /*blog-image, blog-textクラスを横並びにしましょう。
+親要素であるblog-itemクラスに指定*/
+  justify-content/*フレックスアイテムの主軸方向の揃え位置を指定します*/: fkex-start;/*フレックスコンテナの主軸の起点に揃えます。通常、左端に配置されます*/
+}
+
+.blog-image {
+  height: 180px;/*画像の大きさ*/
+}
+
+.blog-text {
+  padding: 25px 0 0 30px;  /*テキスト部分と画像の距離、上側との距離が近いから余白を作る*/
+}
+
+.blog-text-heading {
+  padding-bottom: 15px;  /*見出しと日付、Natureの距離が近いから余白を作る*/
+}
+
+.blog-date {
+  font-size: 12px;
+  display: inline-block;  /*June 19,2017の横にNatureが来る,categoryはすでにインラインブロックだからblog-dateをインラインブロックにする*/
+}
+
+
+.category {
+  display: inline-block;
+  padding: 5px 8px;
+  background-color: #acabab;
+  border-radius: 3px;  /*角が丸くなった,数字要確認*/
+  color: #fff;  /*文字が白くなった*/
+  font-size: 11px;
+}
+
+.pagination {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.pagination p {
+  display: inline-block;  /*横並びになる*/
+  width: 30px;  /* 一つ一つの幅が広がった*/
+  height: 30px;
+  margin: 0 5px;  /*一つ一つの幅がさらに広がった*/
+  color: #fff;
+  background-color: #acabab;
+  border-radius: 3px;  /*角が丸くなった*/
+  line-height: 30px;  /*背景の四角の中のま中になった*/
+}
+
+.sidbar {
+  width: 230px;
+}
+
+.common-heading {
+  border-bottom: 8px solid #f7f7f7;
+  text-align: center;
+  line-height: 0.6;
+}
+
+.sidebar-contents {
+  padding: 50px 0;
+}
+
+.popular-text,
+.categories-text {
+  padding-bottom: 5px;  /*marginにすると余白が狭くなる*/
+  border-bottom: 1px solid #f7f7f7;
+  margin-bottom: 5px;  /*下線から下に余白ができた*/
+}
+
+.popular-text:last-child,
+.categories-text:last-child {  /*最後のテキストの余白を消して下線も消す*/
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.instagram .sidebar-contents {
+  display: flex;  /*Flexboxの利用*/
+  flex-wrap: wrap;  /*flex-wrapプロパティは、フレックスアイテムの折り返しを指定します*/
+}
+
+.instagram-box {
+  width: 110px;
+  padding-top: 110px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 10px;
+}
+
+.instagram-box:nth-child(odd) {
+  margin: 10px;
+}
+
+.instagram-box:nth-child(1) {
+  background-image: url(img/airport.jpg);
+}
+
+.instagram-box:nth-child(2) {
+  background-image: url(img/japan.jpg);
+}
+
+.instagram-box:nth-child(3) {
+  background-image: url(img/snow.jpg);
+}
+
+.instagram-box:nth-child(4) {
+  background-image: url(img/japan2.jpg);
+}
+
+.instagram-box:nth-child(5) {
+  background-image: url(img/lake.jpg);
+}
+
+.instagram-box:nth-child(6) {
+  background-image: url(img/road.jpg);
+}
+
+footer {
+  width: 100%;
+  height: 120px;
+  text-align: center;
+  line-height: 120px;  /*親要素120pxの真ん中に行く,
+  「行の高さ」＝「親要素の高さ」にして中央揃え*/
+  background-color: #848282;
+}
+
+.footer-text {
+  color: #fff;
+}
+
+@media screen and (max-width: 425px) {
+  header {
+    width: 100%;
+  }
+  
+  .nav-list {
+    width: 100%;
+  }
+  
+  .nav-list-item {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+  
+  .social {
+    display: none;
+  }
+  
+  .main-visual-content {
+    width: 100%;
+  }
+  
+  main {
+    width: 100%;
+    display: block;
+  }
+  
+  .blog {
+    width: 100%;
+    margin: 0;
+  }
+  
+  .blog-box {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  
+  .blog-image {
+    width: 49%;
+  }
+  
+  .blog-text {
+    width: 49%;
+    padding-top: 5px;
+  }
+  
+  .sidebar {
+    width: 100%;
+  }
+  
+  .sidebar-contents {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  
+  .instagram-box {
+    width: 48%;
+    padding-top: 48%;
+  }
+  
+  .instagram-box:nth-child(odd) {
+    margin-right: 4%;
+  }
+  
+  .pagination {
+    margin-bottom: 50px;
+  }
+}
